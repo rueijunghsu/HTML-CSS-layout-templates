@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    a:link {
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+    }
+    a:hover {
+      color: red;
+    }
+    .header {
+      display:flex;
+      width: 100%;
+      height: 60px;
+      background-color: #fff;
+      align-items: center;
+    }
+    .header .logo {
+      margin: 30px;
+      margin-right: auto;
+    }
+    .header .logo img {
+      width: 50px;
+    }
+    .header h1 {
+      font-size: 20px;
+      display: inline-block;
+    }
+    .header .item-button  {
+      margin: 10px;
+      padding: 10px;
+    }
+    .div1 {
+      background-blend-mode: multiply;
+      background-color: rgba(37, 48, 61, 0.5);
+      background-image: url("https://picsum.photos/1200/700/?random=1");
+      background-size: cover ;
+      background-position: center center;
+    }
+    .div1 .content {
+      width: 100%;
+      margin: auto;
+      padding: 25px;
+      line-height: 25px;
+    }
+    .div1 h1, .div1 h3, .div1 a{
+      color:white;
+      margin: 0px 150px 40px 200px;
+    }
+    .div1 a  {
+      width: 100px;
+      padding: 10px 30px;
+      color: red;
+      display: inline-block;
+      border: 1px solid red;
+      color:#fff;
+      background-color: red;
+    }
+    /* ============================================ */
+    .div2 .content h2,.div2 .content h4  {
+      text-align: center;
+      margin: 40px 100px;
+    }
+    .div2 .slogan {
+      display:flex;
+      justify-content: space-around;
+    }
+    .div2 .slogan .point{
+      width: 200px;
+    }
+    .div2 .slogan .point img{
+      width: 100%;
+    }
+    /* ============================================ */
+    .div3 {
+        background-color: white;
+    }
+    .div3 .content {
+      width: 600px;
+      margin:50px auto;
+    }
+    .div3 .lecturer {
+      background-color: white;
+      width: 800px;
+      margin: 30px auto;    
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius:10px;
+    }
+    .div3 .lecturer .pic{
+      width: 200px;
+      margin: 30px;
+    }
+    .div3 img{
+      width: 200px;
+      height: 200px;
+      border-radius: 30% 0px 0px 30%;
+    }
+    .div3 .intro {
+      width: 300px;
+    }
+    .div3 .lecturer p, .div3 .lecturer h3, .div3 .lecturer a {
+      margin: 20px;
+    }
+    .div3 .lecturer a  {
+      color:red;
+      display: inline-block;
+      border: 1px solid red;
+      padding: 10px;
+    }
+    .div3 .lecturer a:hover {
+      color:#fff;
+    }
+    /* ============================================ */
+    .div4 {
+      background-color:grey;
+      display:flex;    
+      flex-wrap: wrap;
+      justify-content:center;    
+    }
+    .div4 .intro {
+      width: 700px;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
+    }
+    .div4 .intro .intro-text {
+      width: 300px;
+      padding: 20px;
+    }
+    .div4 .intro .intro-content {
+      width: 300px;
+      background-color: red;
+      padding: 20px;
+    }
+    .div4 h2, .div4 h3, .div4 h4, .div4 p, .div4 a {
+      color:white;
+      margin: 10px 10px;
+    }
+    .div4 .intro .intro-text, .div4 .intro .intro-content {
+      width: 300px;
+      line-height: 30px;
+    }
+    /* ============================================ */
+    .div5{
+      background-color:grey;
+      display:flex;
+      flex-wrap: wrap;
+    }
+    .div5 h3{
+      color: white;
+      margin: 30px 100px 30px 100px;
+    }
+    .div5 .courses-area {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;    
+    }
+    .div5 hr {
+      margin: 0px 10px;
+    }
+    .div5 .courses-area .course {
+      width: 25%;
+      height:350px;
+      background-color: white;
+      border-radius: 10px;
+    }
+    .div5 .courses-area .course p{
+      color: grey;
+      margin: 10px;
+    }
+    .div5 .courses-area .course img {
+      width: 100%;
+      border-radius: 10px 10px 0 0 ;
+    }
+    .div5 a {
+      color:white;
+      background-color: red;
+      display: inline-block;
+      padding: 10px;
+      margin:30px auto; 
+    }
+    .div5 a:hover  {
+      color:#fff;
+      background-color: red;
+    }
+    /* ============================================ */
+    .div6 {
+      background-color: white;
+    }
+    .div6 .text-area {
+      width: 800px;
+      margin:auto;
+    }
+    .div6 .text-area h2, .div6 .text-area h4 {
+      margin: 0 auto 20px auto;
+    }
+    .div6 .course-type-area {
+      width: 800px;
+      margin:auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .div6 .course-type-area .course-type {
+      width: 200px;
+      border-radius: 10px;
+      background-color: white;
+      position: relative;
+    }
+    .div6 img {
+      width: 100%;
+      border-radius:10px 10px 0px 0px
+    }
+    .div6 .course-type-area .course-type h3 {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color:white;
+      font-size: 18px;
+      text-align: center;
+    }
+    /* ============================================ */
+    .div7 {
+      background-color: grey;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content:center;
+    }
+    .div7 a{
+      color: white;
+      text-align: left;
+      margin: 10px 0px;
+    }
+    .div7 h2 {
+      color:white
+    }
+    .div7 a:hover{
+      color: red;
+    }
+    .div7 .info {
+      width: 400px;
+      margin:30px;
+    }
+    .div7 img {
+      width: 200px;
+    }
+    .div7 .set {
+      width: 800px;   
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      Align-items: flex-start;
+    }
+    .div7 .set .group {
+      width: 200px;
+      margin: 30px 0px 50px 0px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">   
+    <div class="logo">
+      <a href="" >
+        <h1>五倍紅寶石 ・專業程式教育機構</h1>
+      </a>
+    </div>
+    <div class="item-button"><a href=""><span>全方位培訓營</span> </a></div>
+    <div class="item-button"><a href=""><span>ASTRO Camp</span></a></div>
+    <div class="item-button"><a href=""><span>線上課程</span></a></div>
+    <div class="item-button"><a href=""><span>短期課程</span></a></div>
+    <div class="item-button"><a href=""><span>專欄文章</span> </a></div>
+  </div>
+
+  <div class="div1">
+    <div class="content">
+      <h1>五倍學習，突破你的可能性</h1>
+      <h3>掌握實戰經驗，從初心素人到業界接軌，讓專業師資為你重新定義程式教育。</h3>      
+      <a href="http://">立即選課 </a>
+    </div>
+  </div>
+
+  <div class="div2">
+    <div class="content">
+      <h2> 不只停留在教你釣魚，更引領你乘風破浪</h2>
+      <h2>我們不藏私的教學，讓所有人都能發揮超越五倍的價值。</h2>
+    </div>
+    <div class="slogan">
+      <div class="point">
+        <img src="p1.png" alt="">
+        <h3>鍛鍊實力，主導學習</h3>
+        <p>搭配最新技術版本，掌握業界脈動，與需求緊密結合，鍛鍊程式實力。</p>
+      </div>
+      <div class="point">
+        <img src="p2.png" alt="">
+        <h3>完整規劃，絕不漏接</h3>
+        <p>線上補課、線下討論與社群活動，確保學員擁有充份且多元的學習資源和支持系統。</p>
+      </div>
+      <div class="point">
+        <img src="p3.png" alt="">
+        <h3>挑戰困境，突破職涯</h3>
+        <p>無論新手塊領域轉職，或在職工程師深度進修，讓五倍為你解構學習，突破困境。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div3">
+    <div class="content">
+      <h2>講師陣容</h2>
+      <h4>我們的講師長期專注於網站開發技術領域，透過研討會、社群演講及授課方式將技術知識分享給更多人知道，讓更多人了解各個技術的美好之處。
+      </h4>
+    </div>    
+    <div class="lecturer">
+      <div class="pic">
+        <img src="https://picsum.photos/400/300/?random=1">
+      </div>
+
+      <div class="intro">
+        <p>HTML / CSS 講師</p>
+        <h3>李建杭 (Amos Lee)</h3>
+        <p>從視覺設計轉職前端的斜槓開發者，活躍於臺灣各大技術研討會，熟稔 HTML & CSS、Bootstrap、RWD、CSS3 等，為國內知名前端技術講師。</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div class="div4">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>短期實體課程</h2>
+        <h4>目標清晰的短期課程，針對單一技術所開設。適合在職進修的工程師、PM，或對網頁設計有興趣的你。</h4>
+      </div>
+
+      <div class="intro-content">
+        <h3>前端課程</h3>
+        <p>除了基礎的 HTML、CSS、JavaScript，還包含 React、Vue 兩大前端框架。讓五倍講師帶你入門，打好網頁前端基礎!
+        </p> 
+        <a href="">前往課程 ></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="div5">
+    <h3>近期課程</h3> 
+    <div class="courses-area">
+      <div class="course">
+        <img src="https://picsum.photos/600/315/?random=4" alt="">
+        <p>專業講師：Amos</p>
+        <hr>
+        <p>人生明天當你依據，水溝會議受到複雜排名，決策幫助心中製作本站並不手段基本設備形成設為，但他有的，頓。</p>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/600/315/?random=5" alt="">
+        <p>專業講師：Amos</p>
+        <hr>
+        <p>本地總經理帶著媽媽使得鬱悶自然分鐘，資源大聲官員厲害意見休閒的錢尤其幫你男性接近以外，位置一切，半。</p>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/600/315/?random=6" alt="">
+        <p>專業講師：Kuro</p>
+        <hr>
+        <p>先生能否就好裡面頭髮學術走出也能困難，採購感染遠程清除衝突設立既然妹妹蒐集平方米青草湖一半，瞬間一。</p>
+      </div>
+    </div>  
+    <a href="http://">看更多課程</a>
+  </div>
+
+  <div class="div6">
+    <div class="text-area">
+      <br>
+      <h4>針對不同需求的學員，五倍規劃了多元且完整的學習路徑：從前端到後端，全方面的包套課程，與彈性的線上課程、假日班，任您自由選擇。</h4>
+    </div>
+    
+    <div class="course-type-area">
+      <div class="course-type">
+        <img src="https://picsum.photos/600/400/?random=1" alt="">
+        <h3>I'm coding it!<br />微痛轉職工程師</h3>
+        <h4>線上課程</h4>
+        <hr>
+        <p>打造等級簡單有機會醫藥權威加速吃螺絲對付部隊家園，水溝睡覺有很多到處，故意搜尋引擎，下來適當知道篇。</p>
+        <br>
+      </div>
+      <div class="course-type">
+        <img src="https://picsum.photos/600/400/?random=2" alt="">
+        <h3>全方位<br />網頁設計前後實戰</h3>
+        <h4>全方位訓練營</h4>
+        <hr>
+        <p>風情總算郵箱一體此處圖書公主網通好好輔助期限小時建材，天使位置您的平台裝置環節軟體不久這種下了重複。</p>
+        <br>
+      </div>
+      <div class="course-type">
+        <img src="https://picsum.photos/600/400/?random=3" alt="">
+        <h3>ASTRO Camp<br />全端工程師實戰訓練營</h3>
+        <h4>線上課程</h4>
+        <hr>
+        <p>很有消失只要要在最快求職我市商城追求狀況今天範圍內不代表，決定所在地誘惑明星如有註冊時間，我又模樣。</p>
+        <br>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="div7">
+    <div class="info">
+      <a href="">電話 | (02) 2331-5247</a> <br>
+      <a href="">信箱 | course@5xcampus.com</a>
+      <a href="">地址 | 10046 台北市中正區衡陽路7號5樓</a>
+    </div>
+
+    <div class="set">
+      <div class="group">
+        <h2>專業課程</h2>
+        <a href="">全方位訓練營</a><br/>  
+        <a href="">ASTRO Camp</a><br/>  
+        <a href="">線上課程</a><br/>  
+        <a href="">短期課程</a><br/>  
+      </div>
+
+      <div class="group">
+        <h2>關於我們</h2>
+        <a href="">關於五倍紅寶石</a><br/>  
+        <a href="">聯絡我們</a>
+      </div>
+
+      <div class="group">
+        <h2>部落格</h2>
+        <a href="">專欄文章</a><br/>  
+        <a href="">最新消息</a><br/>  
+      </div>
+
+      <div class="group">
+        <h2>幫助與政策</h2>
+        <a href="">常見問題</a><br/>  
+        <a href="">隱私權政策</a><br/>  
+        <a href="">服務條款</a><br/>  
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

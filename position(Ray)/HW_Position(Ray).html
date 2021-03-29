@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .box {
+        margin: 100px auto;
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box1,.box2,.box3,.box4 {
+        width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        color: whitesmoke;
+      }
+
+      .box1-1,.box2-1,.box3-1,.box4-1 {
+        width: 330px;
+        height: 350px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+      }
+      .box1-1 h2,.box2-1 h2,.box3-1 h2,.box4-1 h2 {
+        margin: 20px auto 0;
+        margin-left: 20px;
+        font-size: 30px;
+        line-height: 35px;
+      }
+      .box1-1 > div,.box2-1 > div,.box3-1 > div,.box4-1 > div {
+        width: 330px;
+        height: 150px;
+        background-color: brown;
+        display: flex;
+      }
+      .square {
+        font-size: 40px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
+      .rotate {
+        margin: 0;
+        width: 150px;
+        display: block;
+        transform: rotate(90deg);
+        font-size: 120px;
+        line-height: 130px;
+        font-weight: 100;
+        align-items: center;
+        text-align: center;
+      }
+      .box1-1 p,.box2-1 p,.box3-1 p,.box4-1 p {
+        margin: auto;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 3px;
+      } 
+      .box1-2,.box3-2 {
+        width: 400px;
+        height: 280px;
+        background-color: rgba(200, 200, 200, 0.2);
+      }
+      .box2-2,.box4-2 {
+        width: 500px;
+        height: 350px;
+        background-color: rgba(200, 200, 200, 0.2);
+      }
+      .box1-3,.box2-3,.box3-3,.box4-3 {
+        width: 650px;
+        height: 350px;
+        background-color: chocolate;
+      }
+      .box1-3 img,.box2-3 img,.box3-3 img,.box4-3 img {
+        width: 100%;
+        height: 100%;
+      }
+      .box1-4,.box2-4,.box3-4,.box4-4 {
+        width: 650px;
+        height: 280px;
+        background-color: #bbb;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 3px;
+        line-height: 26px;
+      }
+      .box1-4 h3,.box2-4 h3,.box3-4 h3,.box4-4 h3 {
+        margin: 20px auto 0 30px;
+        font-size: 20px;
+        color: red;
+      }
+      .box1-4 h3::after,.box2-4 h3::after,.box3-4 h3::after,.box4-4 h3::after {
+        content: "";
+        border: 2px red solid;
+        display: inline-block;
+        width: 350px;
+        position: relative;
+        bottom: 5px;
+      }
+      .box1-4 h4,.box2-4 h4,.box3-4 h4,.box4-4 h4 {
+        margin: 5px auto 5px 30px;
+        display: inline-block;
+        background-color: black;
+        color: white;
+      }
+      .box1-4 div,.box2-4 div,.box3-4 div,.box4-4 div {
+        margin: auto;
+        margin-left: 45px;
+        color: black;
+      }
+      .box1-4 div::before,.box2-4 div::before,.box3-4 div::before,.box4-4 div::before {
+        content: "";
+        border: 5px red solid;
+        border-radius: 50%;
+        position: absolute;
+        left: 30px;
+        margin: 8px 0px;
+      }
+
+      .box1-5,.box2-5,.box3-5,.box4-5 {
+        width: 80px;
+        height: 50px;
+        background-color: red;
+        display: flex;
+      }
+      .box1-5 div,.box2-5 div,.box3-5 div,.box4-5 div {
+        count: "";
+        display: flex;
+        width: 40px;
+        margin: auto;
+        margin-left: 30px;
+        border-bottom: 15px transparent solid;
+        border-left: 30px white solid;
+        border-top: 15px transparent solid;
+        border-right: 15px transparent solid;
+      }
+      .box1-1 {
+        position: relative;
+        z-index: 3;
+      }
+      .box1-2 {
+        position: relative;
+        left: 170px;
+        top: 50px;
+        z-index: 1;
+      }
+      .box1-3 {
+        position: relative;
+        bottom: 200px;
+        left: 200px;
+        z-index: 2;
+      }
+      .box1-4 {
+        position: relative;
+        z-index: 3;
+        bottom: 250px;
+        left: 50px;
+      }
+      .box1-5 {
+        position: relative;
+        z-index: 3;
+        bottom: 400px;
+        left: 150px;
+      }
+      .box2-1 {
+        position: relative;
+        z-index: 3;
+        left: 570px;
+      }
+      .box2-2 {
+        position: relative;
+        z-index: 1;
+        top: 50px;
+        right: 100px;
+      }
+      .box2-3 {
+        position: relative;
+        z-index: 2;
+        bottom: 200px;
+      }
+      .box2-4 {
+        position: relative;
+        z-index: 3;
+        bottom: 250px;
+        left: 250px;
+      }
+      .box2-5 {
+        position: relative;
+        z-index: 3;
+        bottom: 400px;
+        right: 680px;
+      }
+      .box3-1 {
+        position: relative;
+        z-index: 3;
+      }
+      .box3-2 {
+        position: relative;
+        z-index: 1;
+        left: 170px;
+        top: 50px;
+      }
+      .box3-3 {
+        position: relative;
+        bottom: 200px;
+        left: 200px;
+        z-index: 2;
+      }
+      .box3-4 {
+        position: relative;
+        z-index: 3;
+        bottom: 250px;
+        left: 50px;
+      }
+      .box3-5 {
+        position: relative;
+        z-index: 3;
+        bottom: 400px;
+        left: 150px;
+      }
+      .box4-1 {
+        position: relative;
+        z-index: 3;
+        left: 570px;
+      }
+      .box4-2 {
+        position: relative;
+        z-index: 1;
+        top: 50px;
+        right: 100px;
+      }
+      .box4-3 {
+        position: relative;
+        z-index: 2;
+        bottom: 200px;
+      }
+      .box4-4 {
+        position: relative;
+        z-index: 3;
+        bottom: 250px;
+        left: 250px;
+      }
+      .box4-5 {
+        position: relative;
+        z-index: 3;
+        bottom: 400px;
+        right: 680px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="box1">
+        <div class="box1-1">
+          <div class="square">
+            <div class="rotate">01</div>
+            操控樂趣
+          </div>
+          <h2>使用者導向的貼心設計</h2>
+          <p>搭配全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清新路感回饋，提升駕駛樂趣。</p>
+        </div>
+        <div class="box1-2"></div>
+        <div class="box1-3">
+          <img src="https://picsum.photos/650/350/?random=1" />
+        </div>
+        <div class="box1-4">
+          <h3>車體剛性強化</h3>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+          <h4>安全性</h4>
+          <div>
+            透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾
+          </div>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+        </div>
+        <div class="box1-5"><div></div></div>
+      </div>
+      <div class="box2">
+        <div class="box2-1">
+          <div class="square">
+            <div class="rotate">02</div>
+            安全守護
+          </div>
+          <h2>使用者導向的貼心設計</h2>
+          <p>搭配全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清新路感回饋，提升駕駛樂趣。</p>
+        </div>
+        <div class="box2-2"></div>
+        <div class="box2-3">
+          <img src="https://picsum.photos/650/350/?random=2" />
+        </div>
+        <div class="box2-4">
+          <h3>車體剛性強化</h3>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+          <h4>安全性</h4>
+          <div>
+            透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾
+          </div>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+        </div>
+        <div class="box2-5"><div></div></div>
+      </div>
+      <div class="box3">
+        <div class="box3-1">
+          <div class="square">
+            <div class="rotate">03</div>
+            乘坐舒適
+          </div>
+          <h2>使用者導向的貼心設計</h2>
+          <p>搭配全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清新路感回饋，提升駕駛樂趣。</p>
+        </div>
+        <div class="box3-2"></div>
+        <div class="box3-3">
+          <img src="https://picsum.photos/650/350/?random=3" />
+        </div>
+        <div class="box3-4">
+          <h3>車體剛性強化</h3>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+          <h4>安全性</h4>
+          <div>
+            透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾
+          </div>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+        </div>
+        <div class="box3-5"><div></div></div>
+      </div>
+      <div class="box4">
+        <div class="box4-1">
+          <div class="square">
+            <div class="rotate">04</div>
+            以人為本
+          </div>
+          <h2>使用者導向的貼心設計</h2>
+          <p>搭配全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清新路感回饋，提升駕駛樂趣。</p>
+        </div>
+        <div class="box4-2"></div>
+        <div class="box4-3">
+          <img src="https://picsum.photos/650/350/?random=4" />
+        </div>
+        <div class="box4-4">
+          <h3>車體剛性強化</h3>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+          <h4>安全性</h4>
+          <div>
+            透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾
+          </div>
+          <h4>安全性</h4>
+          <div>透過低重心設計，不僅呈現更低福外觀，更能減少車身側傾</div>
+        </div>
+        <div class="box4-5"><div></div></div>
+      </div>
+    </div>
+  </body>
+</html>
